@@ -25,8 +25,6 @@ fn update_commit_push_set_origin() {
 
     if !add_command.status.success() {
         eprintln!("Error: Failed to add files to the git repo.");
-        eprintln!("Git stderr: {}", String::from_utf8_lossy(&add_command.stderr));
-        eprintln!("Git stdout: {}", String::from_utf8_lossy(&add_command.stdout));
         exit(1);
     }
 
